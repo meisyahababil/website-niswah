@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Raffles - Portal Check-in</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4efe9;
+            color: #4b2e0e;
+        }
+        header {
+            background-color: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #a0522d;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+        }
+        h2 {
+            border-bottom: 2px solid #8b4513;
+            margin-bottom: 15px;
+        }
+        .image-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .image-section img {
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .image-section a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #8b4513;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        .image-section a:hover {
+            text-decoration: underline;
+        }
+        .amenities {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            border: 1px solid #8b4513;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background-color: #8b4513;
+            color: white;
+        }
+        .form-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        form input, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #a0522d;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #8b4513;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hotel Raffles</h1>
+        <p>Tempat menginap nyaman dengan pelayanan istimewa</p>
+    </header>
+
+    <nav>
+        <a href="#tentang">Tentang</a>
+        <a href="#fasilitas">Fasilitas</a>
+        <a href="#form-checkin">Check-in</a>
+    </nav>
+
+    <div class="container">
+        <section id="tentang">
+            <h2>Tentang Hotel Raffles</h2>
+            <p>Hotel Raffles adalah tempat penginapan terbaik di kota. Kami menyediakan kenyamanan, kemewahan, dan layanan yang ramah untuk pengalaman menginap Anda.</p>
+        </section>
+
+        <section id="kamar" class="image-section">
+            <h2>Foto Kamar</h2>
+            <img src="room.jpg" alt="Kamar Hotel">
+            <a href="https://www.raffles.com/jakarta/">Lihat selengkapnya disini</a>
+        </section>
+
+        <section id="fasilitas" class="amenities">
+            <h2>Fasilitas</h2>
+            <ul>
+                <li>Wi-Fi Gratis</li>
+                <li>Kolam Renang</li>
+                <li>Spa dan Pusat Kebugaran</li>
+                <li>Layanan Kamar 24 Jam</li>
+                <li>Parkir Gratis</li>
+            </ul>
+
+            <h2>Daftar Harga</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipe Kamar</th>
+                        <th>Harga Per Malam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Single Room</td>
+                        <td>Rp 1.500.000</td>
+                    </tr>
+                    <tr>
+                        <td>Double Room</td>
+                        <td>Rp 2.500.000</td>
+                    </tr>
+                    <tr>
+                        <td>Luxury Suite</td>
+                        <td>Rp 5.000.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="form-checkin" class="form-section">
+            <h2>Formulir Check-in</h2>
+            <form action="#" method="POST">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+                <label for="tipe-kamar">Tipe Kamar:</label>
+                <select id="tipe-kamar" name="tipe-kamar" required>
+                    <option value="single">Single Room</option>
+                    <option value="double">Double Room</option>
+                    <option value="suite">Luxury Suite</option>
+                </select>
+
+                <label for="tanggal">Tanggal Check-in:</label>
+                <input type="date" id="tanggal" name="tanggal" required>
+
+                <button type="submit">Check-in</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
